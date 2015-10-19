@@ -41,7 +41,7 @@ song_node * insert_in_order(song_node fresh, song_node og){
 }
 
 void print_list(song_node n){
-
+  
 }
 
 song_node * search_by_title(char *title){
@@ -80,5 +80,10 @@ song_node * delete_song(song_node *top, char *song){
 }
 
 void free_list(song_node n){
-
+  song_node *top = &n;
+  while (top != null) {
+    song* curr = top;
+    top = top -> next;
+    free(curr);
+  }
 }
