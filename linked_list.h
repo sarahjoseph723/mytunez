@@ -16,26 +16,6 @@ song_node * search_by_artist(char *artist);
 
 song_node * random_song();
 
-song* remove_song(song* top, char* song){
-  song* temp = top;
-  song* prev;
-
-    if (top -> song = song) {
-      top = temp ->next;
-      free(temp);
-      return NULL;
-    }
-      while (top != NULL && temp-> song != song) {
-	prev = temp;
-	temp = tem-> next;
-    }
-    
-      if (temp == NULL) {
-	return NULL;
-      }
-      prev->next = temp->next;
-
-      free(temp);
-}
+song_node * delete_song(song_node* top, char* song);
 
 void free_list(song_node n);

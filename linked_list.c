@@ -24,8 +24,7 @@ song_node * insert_at_front(song_node fresh, song_node og){
 }
 
 song_node * insert_in_order(song_node fresh, song_node og){
-  song_node *curr = &og;
-  
+
 }
 
 void print_list(song_node n){
@@ -44,7 +43,26 @@ song_node * random_song(){
 
 }
 
-song_node * delete_song(char *title){
+song_node * delete_song(song_node *top, char *song){
+  song* temp = top;
+  song* prev;
+
+  if (top -> song = song) {
+    top = temp ->next;
+    free(temp);
+    return NULL;
+  }
+  while (top != NULL && temp-> song != song) {
+    prev = temp;
+    temp = tem-> next;
+  }
+
+  if (temp == NULL) {
+    return NULL;
+  }
+  prev->next = temp->next;
+
+  free(temp);
 
 }
 
