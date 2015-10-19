@@ -24,7 +24,20 @@ song_node * insert_at_front(song_node fresh, song_node og){
 }
 
 song_node * insert_in_order(song_node fresh, song_node og){
-
+  song_node *start_of_list = &og;
+  song_node *curr = &og;
+  //comparing the name of the songs for alphabetical
+  if (strcmp(fresh.name, *curr.name) < 0) { //thing youre inserting is before first element
+    return insert_at_front(fresh, *curr);
+  }
+  else { //thing to insert comes after first element
+    while (*curr.next & strcmp(fresh.name, *curr.name) < 0 ){
+      curr = *curr.next;
+    }
+    song_node *newNext = *curr.next;
+    *curr.next = &fresh;
+    fresh.next = newNext;
+    return start_of_list;
 }
 
 void print_list(song_node n){
