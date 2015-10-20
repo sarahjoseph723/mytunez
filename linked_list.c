@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stblib.h>
 #include <string.h>
+#include <time.h>
 #include <"linked_list.h">
 
 typedef struct song_node{
@@ -72,6 +73,7 @@ song_node * find_song(song_node* top, char* song){
    }
    return NULL;
  }
+}
 
 song_node * find_artist_song(song_node* top, char* artist){
    while (top != NULL) {
@@ -82,10 +84,28 @@ song_node * find_artist_song(song_node* top, char* artist){
    }
    return NULL;
  }
+}
 
+int get_length(song_node front) {
+  song_node *curr = &front;
+  int ctr = 0;
+  while (hasData(*curr)) {
+    ctr ++;
+    curr = *curr.next;
+  }
+  return ctr;
+}
 
-song_node * random_song(){
-  
+song_node * random_song(song_node front){
+  int len = get_length(front);
+  int x = rand() % len;
+  song_node *curr = front;
+  int ctr = 0;
+  while (ctr < x) {
+    curr = *curr.next;
+    ctr ++;
+  }
+  return curr;
 }
 
 song_node * remove_song(song_node *top, char *song){
