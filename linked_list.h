@@ -1,3 +1,6 @@
+#ifndef linked_list.h
+#define linked_list.h
+
 typedef struct song_node{ 
   char name[256];
   char artist[256];
