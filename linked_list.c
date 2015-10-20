@@ -44,13 +44,26 @@ void print_list(song_node n){
   
 }
 
-song_node * search_by_title(char *title){
-
+song* find_song(song* top, char* song){
+  while (top != NULL) {
+    if (top -> song = song) {
+      print_song(top);
+    }
+    top = top -> next;
+  }
+  return NULL;
 }
 
-song_node * search_by_artist(char *artist){
-
+song* find_artist_song(song* top, char* artist){
+  while (top != NULL) {
+    if (top -> artist = artist) {
+      print_song(top);
+    }
+    top = top-> next;
+  }
+  return NULL;
 }
+
 
 song_node * random_song(){
 
