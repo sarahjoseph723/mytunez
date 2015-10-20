@@ -15,4 +15,4 @@ void shuffle(int n);
 
 song_node * delete_song(char *title);
 
-void delete_list(song_node n);
+void delete_list();
