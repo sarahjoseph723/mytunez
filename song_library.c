@@ -114,26 +114,26 @@ int list_index(char c) {
 }
 
 int main() {
-  char title1[] = "Another Brick in the Wall";
-  char artist1[] = "Pink Floyd";
-  char title2[]= "Is There Anybody Out There?";
-  char artist2[] = "Pink Floyd";
-  char title3[]= "Kids";
-  char artist3[] = "MGMT";
-  char title4[]= "Brooklyn Baby";
-  char artist4[] = "Lana Del Ray";
-  char title5[]= "Kamikaze";
-  char artist5[] = "MO";
-  char title6[]= "This Side of the Moon";
-  char artist6[] = "Gabrielle Aplin";
-  char title7[]= "Show Me";
-  char artist7[] = "Alina Baraz";
-  char title8[]= "Can't Help Falling in Love";
-  char artist8[] = "Haley Reinhart";
-  char title9[]= "Can't Help Falling in Love";
-  char artist9[] = "Elvis Presley";
-  char title10[]= "Strange Brew";
-  char artist10[] = "Cream";
+  char title1[] = "another brick in the wall";
+  char artist1[] = "pink floyd";
+  char title2[]= "is there anybody out there?";
+  char artist2[] = "pink floyd";
+  char title3[]= "kids";
+  char artist3[] = "mgmt";
+  char title4[]= "brooklyn baby";
+  char artist4[] = "lana del ray";
+  char title5[]= "kamikaze";
+  char artist5[] = "mo";
+  char title6[]= "this side of the moon";
+  char artist6[] = "gabrielle aplin";
+  char title7[]= "show me";
+  char artist7[] = "alina baraz";
+  char title8[]= "can't help falling in love";
+  char artist8[] = "haley reinhart";
+  char title9[]= "can't help falling in love";
+  char artist9[] = "elvis presley";
+  char title10[]= "strange brew";
+  char artist10[] = "cream";
   
   printf("Adding songs...\n");
   add_song(title1, artist1);
@@ -149,11 +149,11 @@ int main() {
 
   printf("Search methods...\n");
 
-  char searchSong[] = "";
+  char searchSong[] = "kamikaze";
   printf("Song to find: %s\n", searchSong);
   printf("Result: %p\n",search_song(searchSong));
 
-  char searchArtist[] = "";
+  char searchArtist[] = "mo";
   printf("Artist to find: %s\n", searchArtist);
   printf("Result: %p\n", search_artist(searchArtist));
 
