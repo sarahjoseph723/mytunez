@@ -103,3 +103,27 @@ int list_index(char c) {
   char* alpha = "abcdefghijklmnopqrstuvwqyz";
   return strcspn(alpha, &c);
 }
+
+int main() {
+  char title1[] = "";
+  char artist1[] = "";
+  char title2[]= "";
+  char artist2[] = "";
+  char title3[]= "";
+  char artist3[] = "";
+  char title4[]= "";
+  char artist4[] = "";
+  char title5[]= "";
+  char artist5[] = "";
+  char title6[]= "";
+  char artist6[] = "";
+  char title7[]= "";
+  char artist7[] = "";
+  char title8[]= "";
+  char artist8[] = "";
+  char title9[]= "";
+  char artist9[] = "";
+  char title10[]= "";
+  char artist10[] = "";
+
+}
