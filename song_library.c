@@ -79,7 +79,7 @@ void shuffle(int n) {
     while (library[x] == NULL) {
       x = rand_char(x);
     }
-    random_song(library[x]);;
+    print_song(random_song(library[x]));
   }
 }
 
@@ -125,5 +125,49 @@ int main() {
   char artist9[] = "Elvis Presley";
   char title10[]= "Strange Brew";
   char artist10[] = "Cream";
+  
+  printf("Adding songs...\n");
+  add_song(title1, artist1);
+  add_song(title2, artist2);
+  add_song(title3, artist3);
+  add_song(title4, artist4);
+  add_song(title5, artist5);
+  add_song(title6, artist6);
+  add_song(title7, artist7);
+  add_song(title8, artist8);
+  add_song(title9, artist9);
+  add_song(title10, artist10);
+
+  printf("Search methods...\n");
+
+  char searchSong[] = "";
+  printf("Song to find: %s\n", searchSong);
+  printf("Result: %p\n",search_song(searchSong));
+
+  char searchArtist[] = "";
+  printf("Artist to find: %s\n", searchArtist);
+  printf("Result: %p\n", search_artist(searchArtist));
+
+
+  printf("Printing all p artists: ");
+  print_letter('p');
+
+  printf("Printing all songs by %s\n", searchArtist);
+  print_artist(searchArtist);
+
+  printf("Shuffle library for 5 songs: \n");
+  shuffle(5);
+
+  printf("Deleting methods...\n");
+
+  delete_song(searchSong, searchArtist);
+  printf("Result of deleting %s, by %s: \n", searchSong, searchArtist);
+  print_all();
+
+  delete_list();
+  printf("Result of deleting everything: \n");
+  print_all();
+
+
 
 }
