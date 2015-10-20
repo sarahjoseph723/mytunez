@@ -22,8 +22,16 @@ if (library[i] != null) {
   }
 }
 
+song_node * search_song(char *title){
 
-song_node * search_song(char *title);
+  char n = *name;
+  int i = list_index(n);
+  printf("Search Results for \"%s\":\n", name);
+
+  for(i = 0; i < 26; i++) {
+    find_artist_song(library[i], name);
+  }
+}
 
 song_node * search_artist(char *artist);
 
