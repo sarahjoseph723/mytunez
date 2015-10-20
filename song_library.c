@@ -15,7 +15,7 @@ void add_song(char *title, char *artist){
   char a  = *artist;
   int i = list_index(a);
   
-  song_node c = make_new_node(title, artist);
+  song_node c = make_new_node(*title, *artist);
  
   if (library[i] != NULL) {
     insert_in_order(library[i], c);  
