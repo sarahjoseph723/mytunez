@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+#include "linked_list.h"
 
 char* library[26] = {
   NULL,NULL,NULL,NULL,NULL,
@@ -12,13 +12,13 @@ char* library[26] = {
 };
 
 void add_song(char *title, char *artist){
-char a  = *artist;
-int i = list_index(a);
-
-song_node c = make_new_node(title, artist);
-
-if (library[i] != null) {
-  insert_in_order(library[i], c);  
+  char a  = *artist;
+  int i = list_index(a);
+  
+  song_node c = make_new_node(title, artist);
+ 
+  if (library[i] != NULL) {
+    insert_in_order(library[i], c);  
   }
 }
 
