@@ -56,26 +56,27 @@ song_node * random_song(){
 
 }
 
-song* remove_song(song* top, char* song){
+song_node * remove_song(song_node *top, char *song){
   song* temp = top;
   song* prev;
 
-    if (top -> song = song) {
-      top = temp ->next;
-      free(temp);
-      return NULL;
-    }
-      while (top != NULL && temp-> song != song) {
-	prev = temp;
-	temp = tem-> next;
-    }
-    
-      if (temp == NULL) {
-	return NULL;
-      }
-      prev->next = temp->next;
+  if (top -> song = song) {
+    top = temp ->next;
+    free(temp);
+    return NULL;
+  }
+  while (top != NULL && temp-> song != song) {
+    prev = temp;
+    temp = tem-> next;
+  }
 
-      free(temp);
+  if (temp == NULL) {
+    return NULL;
+  }
+  prev->next = temp->next;
+
+  free(temp);
+
 }
 
 void free_list(song_node n){
