@@ -45,9 +45,28 @@ song_node * search_artist(char *artist){
   }
 }
 
-void print_letter(char c);
+void print_letter(char c){
+  int i = list_index(c);
+  print_list(library[i]);
+}
 
-void print_artist(char *singer);
+void print_artist(char *singer){
+  char a = *artist;
+  int i = list_index(a);
+
+  printf("Songs by %s\n", artist);
+
+  if (library[i] != NULL) {
+    song_node *first = find_artist_song(library[i], artist);
+    song_node *top = first;
+    while(top != NULL) {
+      print_song(top);
+      top = find_artist_song(top -> next, artist);
+    }
+  } else {
+    printf("No Songs By %s\n", artist);
+  }
+}
 
 char rand_char() {
   return rand() % 26;
