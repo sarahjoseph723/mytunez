@@ -17,6 +17,14 @@ song_node make_new_node(char *title, char *singer) {
   return n;
 }
 
+int hasData(song_node n) {
+  if (n.name[0]) {
+    return 1;
+  }
+  else {
+    return 0;
+  }
+
 song_node * insert_at_front(song_node fresh, song_node og){
   fresh.next = &og;
   song_node *start_of_list = &fresh;
@@ -38,35 +46,46 @@ song_node * insert_in_order(song_node fresh, song_node og){
     *curr.next = &fresh;
     fresh.next = newNext;
     return start_of_list;
+  }
+}
+
+void print_song(song_node* s) {
+  if (s != NULL) {
+    printf("%s by %s\n", s-> name, s-> artist);
+  }
 }
 
 void print_list(song_node n){
-  
+  song_node *curr = &n;
+  while (hasData(*curr)) {
+    print_song(*curr);
+    curr = *curr.next;
+  }
 }
 
-song* find_song(song* top, char* song){
-  while (top != NULL) {
-    if (top -> song = song) {
-      print_song(top);
-    }
-    top = top -> next;
-  }
-  return NULL;
-}
+song_node * find_song(song_node* top, char* song){
+   while (top != NULL) {
+     if (top -> song = song) {
+       print_song(top);
+     }
+     top = top -> next;
+   }
+   return NULL;
+ }
 
-song* find_artist_song(song* top, char* artist){
-  while (top != NULL) {
-    if (top -> artist = artist) {
-      print_song(top);
-    }
-    top = top-> next;
-  }
-  return NULL;
-}
+song_node * find_artist_song(song_node* top, char* artist){
+   while (top != NULL) {
+     if (top -> artist = artist) {
+       print_song(top);
+     }
+     top = top-> next;
+   }
+   return NULL;
+ }
 
 
 song_node * random_song(){
-
+  
 }
 
 song_node * remove_song(song_node *top, char *song){
