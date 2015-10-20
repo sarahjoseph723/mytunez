@@ -33,7 +33,17 @@ song_node * search_song(char *title){
   }
 }
 
-song_node * search_artist(char *artist);
+song_node * search_artist(char *artist){
+   char a = *artist;
+  int i = list_index(a);
+  printf("Search Results for \"%s\":\n", artist);
+
+  if (library[i] != NULL) {
+   find_artist_song(library[i], artist);
+  } else {
+    printf("Song Not Found for Query: %s\n", artist);
+  }
+}
 
 void print_letter(char c);
 
