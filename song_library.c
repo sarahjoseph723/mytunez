@@ -41,7 +41,7 @@ void * search_artist(char *artist){
   if (library[i] != NULL) {
    find_artist_song(library[i], artist);
   } else {
-    printf("Song Not Found for Query: %s\n", artist);
+    printf("Song Not Found for: %s\n", artist);
   }
 }
 
