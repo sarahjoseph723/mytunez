@@ -2,7 +2,7 @@
 #include <string.h>
 
 
-song* library[26] = {
+char* library[26] = {
   NULL,NULL,NULL,NULL,NULL,
   NULL,NULL,NULL,NULL,NULL,
   NULL,NULL,NULL,NULL,NULL,
@@ -49,7 +49,13 @@ void print_letter(char c);
 
 void print_artist(char *singer);
 
-void shuffle(int n);
+void shuffle(int n) {
+  int i;
+  
+  for (i = 0; i < n; i++) {
+    random_song(song_node front)
+  }
+}
 
 song_node * delete_song(char *title);
 
