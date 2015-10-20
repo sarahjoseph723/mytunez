@@ -49,11 +49,18 @@ void print_letter(char c);
 
 void print_artist(char *singer);
 
+char rand_char() {
+  return rand() % 26;
+}
+
 void shuffle(int n) {
   int i;
-  
   for (i = 0; i < n; i++) {
-    random_song(song_node front)
+    char x = rand_char();
+    while (library[x] == NULL) {
+      x = rand_char(x);
+    }
+    random_song(library[x]);;
   }
 }
 
