@@ -2,7 +2,7 @@
 #include <string.h>
 #include "linked_list.h"
 
-char* library[26] = {
+song_node* library[26] = {
   NULL,NULL,NULL,NULL,NULL,
   NULL,NULL,NULL,NULL,NULL,
   NULL,NULL,NULL,NULL,NULL,
