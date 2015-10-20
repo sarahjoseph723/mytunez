@@ -1,5 +1,6 @@
-#ifndef LISTHEAD
-#define LISTHEAD
+#ifndef LINK_LIST_H
+#define LINK_LIST_H
+
 
 typedef struct song_node{ 
   char name[256];
