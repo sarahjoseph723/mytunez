@@ -105,25 +105,25 @@ int list_index(char c) {
 }
 
 int main() {
-  char title1[] = "";
-  char artist1[] = "";
-  char title2[]= "";
-  char artist2[] = "";
-  char title3[]= "";
-  char artist3[] = "";
-  char title4[]= "";
-  char artist4[] = "";
-  char title5[]= "";
-  char artist5[] = "";
-  char title6[]= "";
-  char artist6[] = "";
-  char title7[]= "";
-  char artist7[] = "";
-  char title8[]= "";
-  char artist8[] = "";
-  char title9[]= "";
-  char artist9[] = "";
-  char title10[]= "";
-  char artist10[] = "";
+  char title1[] = "Another Brick in the Wall";
+  char artist1[] = "Pink Floyd";
+  char title2[]= "Is There Anybody Out There?";
+  char artist2[] = "Pink Floyd";
+  char title3[]= "Kids";
+  char artist3[] = "MGMT";
+  char title4[]= "Brooklyn Baby";
+  char artist4[] = "Lana Del Ray";
+  char title5[]= "Kamikaze";
+  char artist5[] = "MO";
+  char title6[]= "This Side of the Moon";
+  char artist6[] = "Gabrielle Aplin";
+  char title7[]= "Show Me";
+  char artist7[] = "Alina Baraz";
+  char title8[]= "Can't Help Falling in Love";
+  char artist8[] = "Haley Reinhart";
+  char title9[]= "Can't Help Falling in Love";
+  char artist9[] = "Elvis Presley";
+  char title10[]= "Strange Brew";
+  char artist10[] = "Cream";
 
 }
