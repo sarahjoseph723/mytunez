@@ -89,7 +89,7 @@ void * delete_song(char *title, char *artist){
   remove_song(library[i], title);
 }
 
-void delete_list(song_node n) {
+void delete_list() {
   int i;
   for(i = 0; i < 26; i++) {
     free_list(library[i]);
