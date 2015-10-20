@@ -8,6 +8,8 @@ typedef struct song_node{
   struct song_node *next;
 } song_node;
 
+song_node make_new_node(char *title, char *singer);
+
 song_node * insert_at_front(song_node n);
 
 song_node * insert_in_order(song_node n, int i);
