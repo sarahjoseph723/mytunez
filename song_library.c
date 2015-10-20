@@ -97,6 +97,15 @@ void delete_list() {
   }
 }
 
+void print_all() {
+  char c;
+  int i = 0;
+  for(c='A'; c<='Z'; i++, c++) {
+    printf("\n%c : ",c);
+    print_list(library[i]);
+  }
+}
+
 //finds the index of the letter in the array
 int list_index(char c) {
   c = tolower(c);
