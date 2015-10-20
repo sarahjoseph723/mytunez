@@ -22,7 +22,7 @@ if (library[i] != null) {
   }
 }
 
-song_node * search_song(char *title){
+void * search_song(char *title){
 
   char n = *name;
   int i = list_index(n);
@@ -33,7 +33,7 @@ song_node * search_song(char *title){
   }
 }
 
-song_node * search_artist(char *artist){
+void * search_artist(char *artist){
    char a = *artist;
   int i = list_index(a);
   printf("Search Results for \"%s\":\n", artist);
@@ -83,9 +83,19 @@ void shuffle(int n) {
   }
 }
 
-song_node * delete_song(char *title);
+void * delete_song(char *title, char *artist){
+  char a = *artist;
+  int i = list_index(a);
+  remove_song(library[i], title);
+}
 
-void delete_list(song_node n);
+void delete_list(song_node n) {
+  int i;
+  for(i = 0; i < 26; i++) {
+    free_list(library[i]);
+    library[i] = NULL;
+  }
+}
 
 //finds the index of the letter in the array
 int list_index(char c) {
